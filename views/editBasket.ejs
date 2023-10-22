@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Basket</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="/editBasket.css">
+</head>
+
+<body>
+
+
+    <!-- This will be the First Grid for Profile Img  -->
+    <div class="complete_cont">
+
+
+        <video autoplay muted loop id="background-video">
+            <source src="/videos/video (2160p) (1).mp4" type="video/mp4">
+            <!-- Add additional source elements for different video formats -->
+
+        </video>
+
+
+        <div class="profile_Cont">
+            <img src="<%= editbasketProfile %>" width="150" height="150" draggable="false" alt=" User Profile">
+        </div>
+
+        <!-- This Will be the Second Grid for the informaton to be Displayed  -->
+
+        <div class="textCont">
+
+            <ul class="social-links">
+                <li><a href="/Home.html">Home</a></li>
+                <li><a href="/Explore.html">Explore</a></li>
+                <li><a href="/About.html">About</a></li>
+
+
+            </ul>
+
+            <h1>
+                " <%=basket_name%> " Basket is Eddited here.......
+            </h1>
+        </div>
+
+
+        <!-- This will be the Third Grid for the Search Items  -->
+        <div class="left">
+            <h2>AI Search ------------------------------></h2>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Search AI">
+                <i class="fi fi-rr-search"></i>
+            </div>
+            <ul id="searchResults">
+                <!-- Search results will be displayed here -->
+                <%allsearchitem.forEach(function(item) {%>
+                    <li>
+                        <span>
+                            <img draggable="true" data-itemid="<%=item.item_id%>" width="80" height="80"
+                                src="<%=item.item_img%>" alt="Image" data-itemn="<%=item.item_name%>"
+                                data-itemlink="<%=item.item_link%>" data-itemimg="<%=item.item_img%>">
+
+                            <h4>
+                                <%=item.item_name%>
+                            </h4>
+
+                        </span>
+                    </li>
+
+
+
+                    <%})%>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- This wiil be The Fouth Grid for the Adding of Item in the Basket -->
+
+        <!-- Right side: Basket -->
+        <div class="right">
+            <div class="basket">
+                <h2>Drag and Drop here . . . . . . . . . . . . . . . </h2>
+                <a href="/userProfile">Done</a>
+            </div>
+            <ul id="basketItems">
+                <!-- Basket items will be displayed here -->
+                <% basketItem.forEach(function(buggy) { %>
+                    <div class="completeCont">
+                        <form action="/remove/<%=buggy.item_id%>" method="post">
+                            <button type="submit" class="removebtn"><i class="fi fi-bs-trash"></i></button>
+
+                            <a class="ai-link" href="<%=buggy.item_link%>" target="_blank">
+                                <li class="li">
+
+                                    <div class="items">
+                                        <img src="<%=buggy.item_img%>" width="90" height="90" alt="">
+                                    </div>
+                                    <h2>
+                                        <%=buggy.item_name%>
+                                    </h2>
+                                </li>
+                            </a>
+                        </form>
+                    </div>
+                    <% }); %>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- This is for Implementing the Drag and Drop Operation -->
+    <script>
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.querySelector('#searchInput');
+            const searchResult = document.querySelector('#searchResults');
+            const basketItems = document.querySelector('#basketItems');
+            
+
+
+            //So basically to apply Drag and Drop Functanality!
+            // We Will be Starting With Handlading Drag and Drop 
+
+            let draggedItem = null;
+
+            searchResult.addEventListener("dragstart", function (event) {
+                draggedItem = event.target;
+                console.log("Hello!");
+                draggedItem.classList.add("dragging");
+            });
+
+
+            basketItems.addEventListener("dragover", function (event) {
+
+                draggedItem.classList.remove("dragging");
+                event.preventDefault();
+
+            });
+
+
+
+            //When we Complete the Drag and Perform Drop 
+            basketItems.addEventListener("drop", function (event) {
+                event.preventDefault();
+                //if we are dragging the item then
+                if (draggedItem) {
+
+                    const itemID = draggedItem.getAttribute("data-itemid");
+                    console.log(itemID);
+                    const itemN = draggedItem.getAttribute("data-itemn");
+                    console.log(itemN);
+                    const itemL = draggedItem.getAttribute("data-itemlink");
+                    console.log(itemL);
+                    const itemI = draggedItem.getAttribute("data-itemimg");
+                    console.log(itemI);
+
+
+
+
+
+
+                    //Now Passing the data of Drag and Drop  to the Databse 
+                    fetch(`/add-to-basket/${itemID}/${itemN}/`, {
+                        method: "POST",
+
+                    })
+                    //Now creating a new Li to add in the UI
+                    const newItem = document.createElement("div");
+                    newItem.classList.add("completeCont");
+                    newItem.innerHTML = `
+                    
+                        <form action="/remove/${itemID}" method="post">
+                            <button type="submit" class="removebtn"><i class="fi fi-bs-trash"></i></button>
+
+                            <a class="ai-link" href="${itemL}" target="_blank">
+                            <li class="li">
+
+                                <div class="items">
+                                    <img src="${itemI}" width="90" height="90" alt="">
+                                </div>
+                                <h2>    
+                                    ${itemN}
+                                </h2>
+                            </li>
+                            </a>
+                        </form>
+                    
+        `;
+                    basketItems.appendChild(newItem);
+
+
+                    draggedItem.classList.remove("dragging");
+                    draggedItem = null;
+                }
+
+
+            });
+
+
+            //SEARCHING THE AI
+
+            //This Code is Basically used For Searching AI in the Left Pannel
+            searchInput.addEventListener("input", function () {
+                //so what ever the search input value is 
+                const query = searchInput.value.toLowerCase(); //it is converted to lowercase so there is no case insensitive Problem
+                //So  basically its convert al, the  AI under the SearchReasult in the form of array
+
+                var itemfound = 0;//the applies the forEach and Extract the TextContent of the Each Item 
+                Array.from(searchResults.children).forEach(function (item) {
+
+                    const itemName = item.textContent.toLowerCase();//it is converted to lowercase so there is no case insensitive Problem
+                    //Now we start Checking Weather the Ai is present by the query consist of the input tag's value === the item TextContent which is Stored inside the ItemName!
+                    if (itemName.includes(query)) {
+
+                        item.style.display = "block";
+                        itemfound++;
+                    } else {
+                        item.style.display = "none";
+
+                    }
+
+
+                });
+
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

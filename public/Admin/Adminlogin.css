@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-items:center ;
+    justify-content:center ;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.2px;
+    height: 100vh;
+    
+    background-image: linear-gradient( black 45% ,blue );
+
+}
+
+
+form{
+    width:600px;
+    height:600px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: rgba(78, 79, 79, 0.341);
+    display: flex;
+    flex-flow: column;
+    align-items:center ;
+    justify-content:center ;
+    gap: 30px;
+    box-shadow:  0px 0px 20px rgba(0, 0, 0, 0.499);
+    border-radius: 10px;
+}
+
+form input{
+    width: 100%;
+    line-height: 35px;
+    background-color: #fff;
+    border: 1px solid #a8a6a6;
+    border-radius: 20px;
+    padding: 5px 25px;
+    flex-wrap: wrap;
+    
+
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-style: italic;
+    color: white;
+}
+
+.user,
+.pass{
+    width: 75%;
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    padding: 5px;
+    margin: 15px;
+    
+}
+
+.btn{
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    border-bottom: 4px solid black;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+.btn:hover{
+    background-color: rgb(47, 255, 0);
+    color: #000000;
+    transition: 0.5s;
+}
+
+.btn:active{
+    border-bottom: 3px solid black;
+
+
+
+}
+
+
+span input{
+   font-size: 5rem;
+}
+
+.login-text{
+    color: white;
+    text-shadow: 0px 0px 25px rgb(29, 29, 243);
+}
+
+

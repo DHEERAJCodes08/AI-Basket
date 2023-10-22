@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <title>Admin Pannel</title>
+  <link rel="stylesheet" href="adminpannel.css" />
+</head>
+
+<body>
+
+
+  <div class="inner-section">
+
+
+    <div id="Dashboard" class="Content active">
+      <h3>Dashboard is under upgrade!..💤</h3>
+    </div>
+
+    <!-- AllSearchAi  editbasket page-->
+
+    <div id="allSearchAi" class="Content ">
+      <h2>Entry of new Ai Search</h2>
+
+      <form action="/AdminAllSearchAI" method="post" enctype="multipart/form-data">
+
+        <div id="item">
+          <input type="text" name="item_name" placeholder="AI Name.." required>
+        </div>
+        <div id="item">
+          <input type="text" name="item_name" placeholder="AI Link..." required>
+        </div>
+        <div id="item">
+          <input type="file" id="Ai_logo" name="item_img" accept="image/*" placeholder="">
+        </div>
+        <div id="item">
+          <button class="btn" type="submit">Submit</button>
+        </div>
+
+      </form>
+    </div>
+
+
+    <!-- This we have created for the Home Page -->
+
+    <div id="allSearchAi" class="Content ">
+      <h2>Enter new Ai Homepage</h2>
+
+      <form action="/AdminHomePage" method="post" enctype="multipart/form-data">
+
+        <div id="item">
+          <input type="text" name="" placeholder="AI Name.." required>
+        </div>
+        <div id="item">
+          <input type="text" name="" placeholder="AI Link..." required>
+        </div>
+        <div id="item">
+          <input type="text" name="" placeholder="AI desc..." required>
+        </div>
+
+        <div id="item">
+          <input type="file" id="Ai_logo" name="" accept="image/*" placeholder="">
+        </div>
+        <div id="item">
+          <button class="btn" type="submit">Submit</button>
+        </div>
+
+      </form>
+    </div>
+
+
+    <!-- This we have created for the Explore Page -->
+
+    <div id="ExplorePageAI" class="Content">
+      <h2>Enter new Ai Explorepage</h2>
+
+      <form action="/AdminExplorePage" method="post" enctype="multipart/form-data">
+
+        <div id="item">
+          <input type="text" name="" placeholder="AI Name.." required>
+        </div>
+        <div id="item">
+          <input type="text" name="" placeholder="AI Link..." required>
+        </div>
+        <div id="item">
+          <input type="text" name="" placeholder="AI desc..." required>
+        </div>
+
+        <div id="item">
+          <input type="file" id="Ai_logo" name="" accept="image/*" placeholder="">
+        </div>
+        <div id="item">
+          <button class="btn" type="submit">Submit</button>
+        </div>
+
+      </form>
+    </div>
+
+
+    <!-- This we have created for the Home Page -->
+
+    <div id="AdminHome" class="Content">
+      <h2>Enter new Ai Homepage </h2>
+
+      <form action="/AdminHomePage" method="post" enctype="multipart/form-data">
+
+        <div id="item">
+          <input type="text" name="" placeholder="AI Name.." required>
+        </div>
+        <div id="item">
+          <input type="text" name="" placeholder="AI Link..." required>
+        </div>
+        <div id="item">
+          <input type="text" name="" placeholder="AI desc..." required>
+        </div>
+
+        <div id="item">
+          <input type="file" id="Ai_logo" name="" accept="image/*" placeholder="">
+        </div>
+        <div id="item">
+          <button class="btn" type="submit">Submit</button>
+        </div>
+
+      </form>
+    </div>
+
+
+    <div id="Admin_Logout" class="Content">
+
+      <h3>Thanks for Comming Dheeraj...💤</h3>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="performOpt">
+    <ul class="links">
+      <li class="fetch-btn btn active " data-id="Dashboard">
+        Dashboard
+      </li>
+
+
+      <li class="fetch-btn btn " data-id="allSearchAi">
+        Search All
+      </li>
+
+
+
+      <li class="fetch-btn btn" data-id="AdminHome">
+
+        Homepage
+
+      </li>
+
+
+      <li class="fetch-btn btn" data-id="ExplorePageAI">
+
+        Explore Page
+
+      </li>
+
+      <li class="fetch-btn btn" data-id="Past Qualification">
+
+        Show Feedback
+
+      </li>
+
+
+      <li class="fetch-btn btn" data-id="Admin_Logout">
+
+        Logout
+
+      </li>
+
+
+    </ul>
+
+
+
+
+
+
+    <script src="adminpannel.js"></script>
+
+</body>
+
+</html>

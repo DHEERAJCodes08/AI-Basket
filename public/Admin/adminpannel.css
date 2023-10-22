@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+/*
+  =============== 
+  Variables
+  ===============
+  */
+
+:root {
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: navy;
+  --clr-white: #fff;
+
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr ;
+  column-gap: 20px;
+  row-gap: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+
+
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    font-family: "Poppins", sans-serif;
+
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.links li {
+  display: block;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  color: var(--clr-grey-5);
+  transition: var(--transition);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.links li:hover {
+  align-items: center;
+  background: var(--clr-primary-8);
+  color: black;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 676px) {
+  .performOpt {
+    width: 400px;
+  }
+}
+
+.inner-section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  top: 40px;
+  background-color: beige;
+  order: 2;
+  padding: 20px;
+  border-radius: 10px;
+}
+.inner-section h2 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.performOpt {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  order: 1;
+  margin-top: 30px;
+  background-color: navy;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.503);
+}
+
+.performOpt ul,
+.performOpt ul li {
+  margin: 20px;
+}
+
+#allSearchAi,
+#AdminHome,
+#ExplorePageAI {
+  border-radius: 10px;
+  align-items: center;
+  flex-flow: column;
+  padding: 35px;
+  width: 700px;
+  height: 500px;
+  background-image: linear-gradient(45deg, green, blue);
+  background-repeat: no-repeat;
+}
+#allSearchAi form,
+#AdminHome form #ExplorePageAI form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  gap: 40px;
+}
+
+#item {
+  width: 100%;
+}
+
+#item input {
+  margin-top: 30px;
+  width: 100%;
+  line-height: 35px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  align-items: flex-start;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  letter-spacing: 1.2px;
+}
+
+#item button {
+  background-color: rgb(25, 155, 235);
+  padding: 10px 25px;
+  color: #fff;
+  border: 2px solid #7ec3ff;
+  font-family: "Poppins", sans-serif;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.Content {
+  /*  normallly all the Contents Will be Not displayed  */
+  display: none;
+}
+
+.Content.active {
+  /* the Cuntent with the Active Tag only will be Displayed  */
+  display: block;
+}
+
+.btn.active {
+  /* here it means the button which is contaning the Active class will be using this Property */
+  color: rgb(255, 255, 255);
+  background-color: #7ec3ffa0;
+}

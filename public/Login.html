@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>User Login⚡</title>
+    <link rel="stylesheet" href="UserLogin.css">
+</head>
+
+<body>
+
+
+    <div class="preloader">
+        <img src="XOsX.gif" width="100" height="100" alt="">
+       </div>
+    
+
+    <section class="container">
+        <div class="left">
+            <img src="Login images/pexels-ali-pazani-2777898.jpg" alt="">
+            
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right">
+
+            <div class="right-cont">
+                <div class="logo">
+                    <img src="Bg-images/logo -icon1.png" alt="">
+                    <h2 class="heading">Login here..</h2>
+                    <span>Login to get Access to 100+ AI Modules for Free</span>
+                </div>
+
+                <hr>
+                <br>
+                <br>
+
+                <form action="" method="post">
+
+                    <div class="user">
+                        <label for="username">Username</label>
+                        <input type="email" name="name" id="username" placeholder="example@gmail.com" required>
+                    </div>
+
+                    <div class="pass">
+                        <input type="password" name="password" id="pass" placeholder="" required>
+                        <label for="pass">Password</label>
+                    </div>
+
+                    <div class="check">
+                        <span><input type="checkbox" checked></span>
+                        <h3>I accept & agree the terms and Conditions</h3>
+                    </div>
+
+                    <div class="submit-btn">
+                        <button class="btn" type="submit">Login</button>
+                        <p>or</p>
+                        <a href="SingUp.html" target="
+                        ">SignUp</a>
+
+
+                </form>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <script>
+        const preloader = document.querySelector('.preloader');
+    
+        window.addEventListener("load", function(){
+          preloader.classList.add("hide-preloader")
+        })
+    
+      </script>
+
+</body>
+
+</html>

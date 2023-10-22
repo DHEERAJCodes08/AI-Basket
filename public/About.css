@@ -1,0 +1,642 @@
+@import url("https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap"); /* For the Web name */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap"); /* the Nav  */
+@import url("https://fonts.googleapis.com/css2?family=Geologica&display=swap"); /* heading */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap"); /* para */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"); /* Ai-text */
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Bebas+Neue&family=Scope+One&family=Ubuntu:wght@300&family=Unbounded:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Anton&family=Bebas+Neue&family=Libre+Baskerville:wght@700&family=Satisfy&family=Scope+One&family=Ubuntu:wght@300&family=Unbounded:wght@300&display=swap");
+
+/* Universal Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* this styling is for the Scrollbar that occurs in the right side of the Webpage  */
+
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* The Main Styling Starts Here >>>>> */
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+  z-index: 100;
+}
+
+input[type="checkbox"]:checked ~ .overlay {
+  pointer-events: auto;
+  opacity: 0.85;
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.donation {
+  position: fixed;
+  z-index: 100;
+  top: 70%;
+  right: 0%;
+}
+
+.Qrcode img {
+  height: 450px;
+  width: 350px;
+}
+
+figure:hover {
+  cursor: pointer;
+}
+
+.final_container {
+  position: fixed;
+  padding-top: 10px;
+  top: 50%;
+  left: 50%;
+  z-index: 101;
+  width: 90%;
+  max-width: 500px;
+  background-color: rgb(0, 140, 255);
+  height: 100%;
+  max-height: 1000px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  border-radius: 20px;
+}
+
+input[type="checkbox"]:checked ~ .final_container {
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.9);
+  /* -webkit-transition: transform 0.5s ease opacity 0.5s ease ; */
+  transition-delay: 0.25s;
+}
+
+.Qr {
+  filter: contrast(120%);
+  /* filter: saturate(120%); */
+}
+
+.Qrcode h3 {
+  font-size: 1.7rem;
+}
+
+.button_theme2 i {
+  font-size: 1.57rem;
+  margin-top: 70px;
+  color: rgb(0, 140, 255);
+}
+
+.button_theme2 i:hover {
+  cursor: pointer;
+  font-size: 2rem;
+  transition: font-size 0.5s;
+  color: red;
+}
+
+.Qrcode {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+.Qrcode p q {
+  font-family: "Aboreto", cursive;
+  font-family: "Anton", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Scope One", serif;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Unbounded", cursive;
+}
+
+.Qrcode h3 {
+  font-family: "Satisfy", cursive;
+}
+
+.inside {
+  display: block;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.inside a {
+  color: black;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.86);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  z-index: 999;
+}
+
+.hide-preloader {
+  z-index: -999;
+  visibility: hidden;
+}
+
+.bg-img {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 100%; /* This is styling for Video  of  Space running in Background */
+  max-width: 500px;
+  filter: brightness(60%);
+  border: none;
+  padding: none;
+  cursor: auto;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 20px;
+}
+
+.custom-shape-divider-bottom-1686459844 {
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1686459844 svg {
+    position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 177px;
+}
+
+.custom-shape-divider-bottom-1686459844 .shape-fill {
+  fill: #FFFFFF;
+}
+
+/*  This is the Styling for Sect-1 */
+
+.sect-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  position: absolute;
+  top: calc(1%);
+}
+
+
+.nav-item a,
+#active {
+  font-family: "Chakra Petch", sans-serif;
+  letter-spacing: 1.5px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  filter: brightness(120%);
+}
+#profile {
+  filter: brightness(100%);
+}
+.nav-item a:hover {
+  font-weight: bold;
+  color: rgb(252, 3, 252);
+  filter: brightness(150%);
+}
+
+.brand {
+  color: #fff;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 10%;
+  gap: 20px;
+}
+
+#links {
+  width: 55%;
+  background-color: rgba(255, 255, 255, 0.312);
+  border: NONE;
+  border-radius: 10px;
+  padding-left: 15px;
+}
+
+#links li {
+  text-decoration: none;
+  color: white;
+  display: grid;
+  grid-template-columns: 0.4fr 0.4fr 0.4fr 0.4fr;
+  padding: 5px 5px;
+}
+
+.nav-cont {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  /* background-color: blue; */
+}
+
+.logo-icon {
+  filter: saturate(150%);
+  border: 2px solid #2c94ea;
+  border-radius: 10px;
+  animation: flicker 5s linear infinite;
+}
+
+@keyframes flicker {
+  0% {
+    border: 2px solid #2c94ea;
+    border-radius: 10px;
+  }
+
+  40% {
+    border: 2px dotted #ef00e2;
+    border-radius: 30px;
+  }
+  60% {
+    border: 2px solid #2c94ea;
+    border-radius: 50px;
+  }
+  80% {
+    border: 2px dotted #ef00e2;
+    border-radius: 30px;
+  }
+  100% {
+    border: 2px dotted #2c94ea;
+    border-radius: 10px;
+  }
+}
+
+.name {
+  animation: droping 5s linear infinite;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  word-spacing: 10px;
+  font-family: "Aoboshi One", serif;
+}
+@keyframes droping {
+  0% {
+    filter: drop-shadow(1px 3.5px 9px #2c94ea);
+  }
+
+  40% {
+    filter: drop-shadow(1px 3.5px 9px #ef00e2);
+  }
+  70% {
+    filter: drop-shadow(1px 3.5px 9px #2c94ea);
+  }
+  90% {
+    filter: drop-shadow(1px 3.5px 9px #ef00e2);
+  }
+}
+
+
+/* this is the Styling for section 2 */
+.sect-2{
+  width: 40%;
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  justify-content: center;
+  top: calc(14%);
+  left: calc(10%);
+}
+
+.about{
+  font-family: "Geologica", sans-serif;
+  font-size: 7rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.951);
+  margin: 5px;
+  margin-bottom: 30px;
+  word-spacing: 2px;
+  letter-spacing: 1.5px;
+  filter: saturate(150%);
+  filter: drop-shadow(0px 0px 1px black);
+
+}
+
+.info{
+  width: 110%;
+  font-family: "Geologica", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.951);
+  filter: drop-shadow(0 0 5px rgb(38, 229, 216));
+}
+.about:hover{
+  filter: saturate(150%);
+  transition: 2.5s;
+  transform: scale(1.07);
+  filter: drop-shadow(0px 0px 5px black);
+
+}
+
+.info:hover {
+  filter: saturate(150%);
+  transition: 2.5s;
+  transform: scale(1.07);
+  filter: drop-shadow(0px 0px 5px black);
+}
+
+/* styling for the section 3 */
+.sect-3{
+  position: relative;
+  background: linear-gradient(rgb(26, 228, 177),rgb(0, 225, 255) );
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 700px;
+  padding: 20px;
+  border-top-right-radius: 30%;
+ border-top-left-radius: 20px;
+}
+
+.sect-3 h2{
+  font-family: "Geologica", sans-serif;
+  font-size: 3rem;
+  color: #000000;
+}
+
+.cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;  
+
+}
+
+.first{
+  width: 200PX;
+  height: 200px;
+  background-color: #ffffff87;
+  display: flex;
+  flex-flow: column ;
+  align-items:center;
+  justify-content: space-evenly;
+  border-radius: 10PX;
+  box-shadow: 0px 0px 30px  rgb(56, 57, 57);
+  font-family: "Aboreto", cursive;
+  font-family: "Scope One", serif;
+  font-family: "Ubuntu", sans-serif; /* The is the Styling For The Heading IN the top of Section 4 */
+  font-family: "Unbounded", cursive;
+  font-weight: 500;
+
+}
+
+.first:hover{
+  scale: 1.1;
+  transition: all 0.5s;
+}
+#founder{
+  border: 2px solid gold;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px  rgba(255, 217, 0, 0.793);
+}
+
+.first img{
+  border: 2px solid rgb(0, 170, 255);
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px  rgba(0, 166, 255, 0.793);
+
+}
+
+
+
+footer {
+  width: 100%;
+  padding: 50px 50px 50px 0px ;
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1.2fr ;
+  place-content: center;
+  align-items: center;
+  column-gap: 70px;
+  background-color: rgba(0, 0, 0, 0.948);
+}
+
+.sect_6 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo_footer {
+  object-fit: fill;
+  filter: saturate(150%);
+}
+
+.name_footer {
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(25, 25, 246);
+  text-shadow: 0px 0 20px rgb(0, 0, 255);
+}
+
+.wbname{
+  color: #fff;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+  gap: 5px;
+}
+
+
+
+.links_footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
+  filter: saturate(120%);
+}
+
+.footer_headings {
+  letter-spacing: 1.7px;
+  font-size: 1.3rem;
+  color: rgba(154, 152, 152, 0.86);
+  filter: saturate(150%);
+}
+
+.sect_7 {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 16px;
+}
+.sect_8 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.sect_8 ul li,
+.sect_7 ul li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.sect_8 ul li:hover,
+.sect_7 ul li:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+.sect_8 ul li a,
+.sect_7 ul li a {
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.sect_8 ul li a,
+.sect_7 ul li a {
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 3px;
+}
+
+.sect_8 ul li a:hover,
+.sect_8 ul li a:focus,
+.sect_7 ul li a:hover, 
+.sect_7 ul li a:focus {
+  color: rgb(252, 3, 252);
+  filter: saturate(200%);
+  font-weight: bolder;
+  text-shadow: 0 0 10px rebeccapurple;
+}
+
+.sect_9 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sect_9 input[type="text"] {
+  padding: 0 20px;
+  line-height: 30px;
+  font-size: 1.05rem;
+  color: rgb(255, 255, 255);
+  background-color: #363535;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  margin-top: 10px;
+  letter-spacing: 1.05px;
+  word-spacing: 1.2px;
+}
+.sect_9 input[type="text"]:active,
+.sect_9 input[type="text"]:focus {
+  border-bottom: 2.6px solid rgb(0, 110, 255);
+  filter: saturate(120%);
+  filter: brightness(120%);
+  background-color: black;
+}
+
+.btn_1 {
+  width: 35px; /* This is Also the Styling for Section 3 */
+  height: 35px;
+  background-color: rgb(
+    6,
+    240,
+    22
+  ); /* This is the Submit Button  for the Reviews Section */
+  border: 2px solid green;
+  border-radius: 50%;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.btn_1:hover,
+.btn_1:focus {
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(4, 175, 4);
+  transition: 0.3s;
+  box-shadow: 0 0 8px 3px rgb(0, 247, 29);
+}
+
+.sect_10 {
+  margin-right: 40px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: rgb(25, 113, 246);
+  text-shadow: 0px 0 20px rgb(0, 0, 255);
+}
+
+.links_footer a {
+  animation: gingle 0.6s ease infinite;
+}
+
+@keyframes gingle {
+  0%,
+  100% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+
+

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User profile</title>
+
+    <!-- Style Sheet  -->
+
+    <link rel="stylesheet" type="text/css" href="/userProfile.css">
+
+    <!-- End of Style Sheet -->
+
+
+    <!-- Icons Links -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <!-- End of Icons Links -->
+</head>
+
+<body>
+    <!-- This is the Begning of the Code -->
+    <!-- Update Profile Model -->
+    <div class="ProfileUpdateModel">
+
+        <input type="checkbox" id="click" style="display: none;">
+        <label class="button" for="click">
+            <a class="button_theme">Edit Profile</a>
+        </label>
+
+        <div class="final_container">
+            <div class="inside">
+                <h1>Complete Your Profile here...</h1>
+
+                <form action="" method="post">
+
+                    <div class="basic_info">
+                        <!-- Starts here -->
+                        <div class="first">
+                            <label for="fullname">
+                                <h2>Name:</h2>
+                                <input type="text" name="fullname" placeholder="Fullname" id="fullname " required>
+                            </label>
+                            <label for="email">
+                                <h2>Email:</h2>
+                                <input type="email" placeholder="example.com" name="email" id="email" required>
+                            </label>
+                            <label for="phone">
+                                <h2>Phone:</h2>
+                                <input type="number" placeholder="XXXXXXXXXXX" name="phone" id="phone" required>
+                            </label>
+
+                            <label for="">
+
+                                <label for="male">
+
+                                    <input type="radio" value="Male" name="gender" id="male">
+                                    <h2>Male</h2>
+                                </label>
+                                <label for="female">
+                                    <input type="radio" value="Female" name="gender" id="female">
+                                    <h2>Female</h2>
+                                </label>
+                            </label>
+                            <label for="address">
+                                <h2>Address:</h2>
+                                <textarea name="address" id="address" cols="50" rows="3" required></textarea>
+                            </label>
+
+                            <label for="Work">
+                                <h2>Work:</h2>
+                                <input type="text" name="work" id="work" placeholder="Optional">
+                            </label>
+
+                            <label for="DOB">
+                                <h2>Birthday:</h2>
+                                <input type="date" name="DOB" id="DOB">
+                            </label>
+
+                            <label for="location">
+                                <h2>Location:</h2>
+                                <input type="text" name="location" id="location">
+                            </label>
+                            <label for="passion">
+                                <h2>Passion:</h2>
+                                <input type="text" name="passion" id="passion">
+                            </label>
+
+
+                            <label class="Profile-cross" for="click">
+                                <button type="submit" class="button_submit">Save</button>
+                                <br>
+                                <br>
+
+                                <i class="fi fi-bs-cross"></i>
+                            </label>
+
+
+                        </div>
+
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+        <div class="overlay"> </div>
+        <div class="button_arrow"></div>
+
+
+    </div>
+
+
+
+
+    <main class="Container">
+
+        <!-- This is for Logo  -->
+        <section class="sect-1">
+            <div class="logo-box">
+                <figure class="Banner">
+                    <img src="Login images/AI-Express-9-25-2023.png" width="200" height="30" alt="" />
+                </figure>
+
+
+                <ul class="social-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Explore.html">Explore</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href=""> Premium</a></li>
+
+
+                </ul>
+
+
+                <ul class="social-links">
+                    <li><i class="fi fi-brands-twitter"></i></li>
+                    <li><i class="fi fi-brands-instagram"></i></li>
+                    <li><i class="fi fi-brands-facebook"></i></li>
+                    <li><i class="fi fi-brands-linkedin"></i></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- USER PROFILE -->
+        <section class="sect-2">
+            <div class="profile-box">
+                <label for="profile" class="profile">
+                    <form id="uploadForm" action="/uploadImg" method="post" enctype="multipart/form-data">
+                        <!-- //now here the Form will be Automatically Submited when the File is Uploaded -->
+                        <input type="file" id="profile" name="ProfileImg" accept="image/*" onchange="autoSubmit()"
+                            style="display: none;">
+                        <img src="<%= user.profileimg %>" width="180" height="180" alt=" User Profile">
+
+                    </form>
+                </label>
+                <label for="profile">
+                    <div class="cam_icon">
+                        <i class="fi fi-rr-camera"></i>
+                    </div>
+                </label>
+            </div>
+        </section>
+
+
+        <!-- Work -->
+        <section class="sect-3">
+
+            <div class="heading-2">
+                <h1>Your Baskets</h1>
+                <br>
+                <span class="underline">__________________________________________________</span>
+            </div>
+
+            <div class="buckets">
+
+                <div class="container  mt-5" style="width: 500px;">
+
+                    <div class="input-group mb-3 ">
+                        <form action="/addBuckets" method="post">
+                            <input type="text" name="bucketName" class="form-control" placeholder="Basket Name"
+                                aria-label="Chapter no" aria-describedby="button-addon2" required>
+                            <button class="btn btn-outline-success" type="submit" id="AddBtn">Add</button>
+                        </form>
+                    </div>
+
+                </div>
+
+
+                <div class="container " style="width :500px">
+
+                    <ul class="list-group" id="newul">
+                        <!-- // Check if basketData exists and is an array before using forEach -->
+                        <%if(Array.isArray(basket)){%>
+                            <!-- Here if the Comming Basket is in the Form of array then check yhis -->
+                            <% basket.forEach(function(basket) { %>
+                                <form action="/removeBasket" method="post">
+                                    <a href="/editbasket/<%=basket.basket_name%>/<%=basket.basket_id%>" >
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <h3 class="flex-grow-1">
+                                                <%=basket.basket_name%>
+                                            </h3>
+                                            <!-- Here we are Just Storing the Basket id so that on click to this only this can be deleted -->
+                                            <input type="hidden" name="basketId" value="<%= basket.basket_id %>">
+
+                                            <!-- <button type="button" class="btn btn-warning mx-2" onclick="EditChapter(this)">Edit</button> -->
+                                            <button type="submit" class="btn btn-danger">Remove</button>
+
+                                        </li>
+                                    </a>
+                                </form>
+                                <% }); %>
+
+                                    <% } else { console.log("Nothing is here, Please add Something 💙✨"); } %>
+
+
+
+
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section class="sect-4">
+            <div class="name-cont">
+                <div class="name">
+                    <h1 class="name-text">
+                        <%= user.name%>
+                    </h1>
+                </div>
+                <div class="icon">
+                    <i class="fi fi-sr-marker"></i>
+                    <p class="place ">
+                        <%= user.location%>
+                    </p>
+                </div>
+            </div>
+
+            <div class="Personal-info">
+<!--                 <div></div>
+                <div class="parents-name">
+                    <img src="Collage proj/father-and-daughter.png" alt="">
+                    <p class="father">Raj Kishor Prasad</p>
+                </div>
+                <div class="parents-name">
+                    <img src="Collage proj/mother.png" alt="">
+                    <p class="mother">Urmila Devi</p>
+                </div> -->
+
+                <div class="PRN">
+                    <p class="passion">
+                        Passion:
+                    </p>
+                    <p class="passion_data">
+                        <%= user.passion%>
+                    </p>
+                </div>
+            </div>
+
+            <div class="button-cont">
+                <a class="action" href="#">
+                    <button type="button" class="send-msg btn">
+                        <i class="fi fi-sr-comment-alt"></i>
+                        Send Message
+                    </button>
+                </a>
+                <a class="action" href="#">
+                    <button type="button" class="contact-us btn">
+                        <i class="fi fi-sr-phone-call"></i>
+                        Contact
+                    </button>
+                </a>
+                <a class="action" href="">
+                    <button type="button" class="report btn">
+                        <i class="fi fi-sr-megaphone"></i>
+                        Report User
+                    </button>
+                </a>
+            </div>
+        </section>
+
+
+        <section class="sect-5">
+
+            <ul class="fetch-button-cont">
+                <li>
+                    <button type="button" class="fetch-btn btn active" data-id="Timeline">
+                        <i id="icons" class="fi fi-sr-eye"></i>
+                        Timeline
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="fetch-btn btn" data-id="Course Details">
+                        <i class="fi fi-rr-chart-histogram"></i>
+                        Course Details
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="fetch-btn btn" data-id="Past Qualification">
+                        <i class="fi fi-sr-graduation-cap"></i>
+                        Past Qualification
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="fetch-btn btn" data-id="About">
+                        <i id="icons" class="fi fi-sr-user"></i>
+                        About
+                    </button>
+                </li>
+            </ul>
+
+
+            <hr>
+            <br>
+
+
+            <!-- This Details are for the TimeLine  -->
+            <div class="Content active" id="Timeline">
+
+                <div class="contact-heading">
+                    <h1 class="info-headings">
+                        CONTACT DETAILS
+                    </h1>
+                </div>
+
+                <ul class="contact-info-all">
+
+                    <li class=" li-info">
+                        <h3 class="detail">Phone :</h3>
+                        <p>
+                            <%= user.phone%>
+                        </p>
+                    </li>
+
+                    <li class=" li-info">
+                        <h3 class="detail">Address :</h3>
+                        <p>
+                            <%= user.address%>
+                        </p>
+                    </li>
+                    <li class=" li-info">
+                        <h3 class="detail">E-mail :</h3>
+                        <p>
+                            <%=user.email%>
+                        </p>
+                    </li>
+                    <!--                     <li class="li-info">
+                        <h3 class="detail">Category :</h3>
+                        <p>
+                            B-tech
+                        </p>
+                    </li> -->
+
+                </ul>
+
+
+                <div class="Basic-heading">
+                    <h1 class="info-headings">
+                        BASIC DETAILS
+                    </h1>
+                </div>
+
+                <ul class="basic-info-all">
+                    <li class=" li-info">
+                        <h3 class="detail">Birthday :</h3>
+                        <p>
+                            <%= user.dob%>
+                        </p>
+                    </li>
+
+                    <li class=" li-info">
+                        <h3 class="detail">Gender :<h3>
+                                <p>
+                                    <%=user.gender%>
+                                </p>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- End of timeline Details -->
+
+
+
+
+            <!-- This Details are for Course Details -->
+            <div class="Content " id="Course Details">
+
+                <div class="Course-heading">
+                    <h1 class="info-headings">COURSE DETAILS</h1>
+                </div>
+
+                <ul class="Course-info-all">
+                    <li class=" li-info">
+                        <h3 class="detail">Course :</h3>
+                        <p>
+                            B.tech
+                        </p>
+                    </li>
+
+                    <li class=" li-info">
+                        <h3 class="detail">Branch :<h3>
+                                <p>
+                                    Computer Science & Engineering
+                                </p>
+                    </li>
+
+                    <li class=" li-info">
+                        <h3 class="detail">Year :<h3>
+                                <p>
+                                    Second
+                                </p>
+                    </li>
+
+                    <li class=" li-info">
+                        <h3 class="detail">Semester :<h3>
+                                <p>
+                                    Second
+                                </p>
+                    </li>
+
+                    <li class=" li-info">
+                        <h3 class="detail">Admision Year :<h3>
+                                <p>
+                                    2020
+                                </p>
+                    </li>
+                </ul>
+            </div>
+            <!-- This is the End of Course Details -->
+
+
+
+
+            <!-- This is the Start of Past Qualification -->
+            <div class="Content" id="Past Qualification">
+
+                <div class="Qualification-heading">
+                    <h1 class="info-headings">PAST QUALIFICATION</h1>
+                </div>
+
+                <ul class="qualification-info-all">
+                    <li class=" li-info">
+                        <h3 class="detail">SSC:</h3>
+                        <p>
+                            Aditya Birla Public School Awarpur
+                        </p>
+
+                    </li>
+
+                    <li class=" li-info">
+                        <h3 class="detail">HSC :</h3>
+                        <p>
+                            Aditya Birla Public School Awarpur
+                        </p>
+                    </li>
+
+                    <li class=" li-info">
+                        <h3 class="detail">Diploma:</h3>
+                        <p>
+                            Ballarpur Institute of Technology
+                        </p>
+                    </li>
+            </div>
+            <!-- This is the End of Past Qualification -->
+
+
+
+            <!-- This is the Start of About -->
+            <div class="Content" id="About">
+
+                <div class="About-heading">
+                    <h1 class="info-headings">Career Intrests </h1>
+                </div>
+
+                <ul class="qualification-info-all">
+                    <li class=" li-info">
+                        <h3 class="detail">Type:</h3>
+                        <p>
+                            Business
+                        </p>
+
+                    </li>
+
+                    <li class=" li-info">
+                        <h3 class="detail">Career Aspiration:</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non soluta corporis est, cum iusto
+                            commodi animi, eius totam saepe nobis cupiditate quidem nisi? Voluptatibus quia dolor porro
+                            inventore alias, amet eius, nemo repudiandae reprehenderit esse, earum deleniti. Suscipit
+                            cumque provident hic eius similique sapiente ducimus quia voluptatum esse, eaque, fugit
+                            dolores et, consectetur officiis impedit? Nihil officiis architecto repellendus, minus a
+                            ipsam? Est eos distinctio nostrum quos consequuntur fugit beatae.
+                        </p>
+                    </li>
+
+                    <li class=" li-info">
+                        <h3 class="detail">About:</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, tenetur. Illum, rerum
+                            aliquam molestias, optio itaque quo maxime nihil facere illo, et consectetur minus modi
+                            corporis! Dicta a laborum hic aperiam quisquam fugiat officia architecto vero officiis?
+                            Deleniti odit qui quas eum. Ad officia eligendi, nesciunt vel quae asperiores odio
+                            laboriosam consequatur dignissimos error adipisci aperiam inventore dolorum aliquid corporis
+                            aut commodi, harum at eveniet dolore expedita minima? Quas harum ex nam blanditiis magnam
+                            obcaecati debitis sunt nesciunt velit quae cupiditate itaque fugiat maiores tam
+                        </p>
+                    </li>
+            </div>
+            <!-- This is the End of Details -->
+
+
+        </section>
+
+
+
+    </main>
+
+    <!-- This is the Ending of the Code -->
+    <!-- Created by Dheeraj Prasad Btech 2year -->
+
+
+    <!-- This is the Java Script  -->
+    <script src="userProfile.js"></script>
+
+    <script>
+
+        function autoSubmit() {
+            document.getElementById("uploadForm").submit();
+        }
+    </script>
+
+
+</body>
+
+</html>
